@@ -7,7 +7,7 @@
 
 ## 环境
 + `python3`
-+ `requests`
++ `requests`模块
 
 
 ## 用法：
