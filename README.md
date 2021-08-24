@@ -7,7 +7,7 @@
 
 ## 环境
 + `python3`
-+ `requests`模块
++ 用于发送http请求的`requests`模块
 
 
 ## 用法：
