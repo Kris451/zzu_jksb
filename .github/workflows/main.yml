@@ -1,0 +1,32 @@
+name: zzu_jksb
+
+on:
+  schedule:
+    - cron: '0 21 * * *'
+  push:
+    branches: [ main ]
+  
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+  # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
+    - name: jksb
+      env:
+        id: ${{ secrets.id }}
+        pwd: ${{ secrets.pwd }}
+      run: |
+        python jksb.py
