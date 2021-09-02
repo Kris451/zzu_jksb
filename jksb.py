@@ -1,10 +1,3 @@
-#账号 密码
-id = "XXXX"
-pwd = "XXXX"  
-#账号和密码需要被双引号""包裹
-#   eg:
-#       id = "201988880101"
-#       pwd = "password"
 
 import re
 import requests
@@ -14,6 +7,13 @@ import base64 #用于解密编码
 import logging #用于日志控制
 import os,sys
 
+#账号 密码
+id = os.environ['id']
+pwd = os.environ['pwd'] 
+#账号和密码需要被双引号""包裹
+#   eg:
+#       id = "201988880101"
+#       pwd = "password"
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 r=""
