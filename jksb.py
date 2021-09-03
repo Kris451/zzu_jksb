@@ -22,6 +22,8 @@ r=""
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
 #create a log file at the work directory
+
+# 日志文件my.log会保存在该python文件所在目录当中
 logging.basicConfig(filename=curr_dir+'/my.log', level=logging.INFO, format=LOG_FORMAT, datefmt=DATE_FORMAT)
 
 logging.info("===开始打卡===")
