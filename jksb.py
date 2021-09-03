@@ -208,7 +208,7 @@ while True:
 text = r.text.encode(r.encoding).decode(r.apparent_encoding) #解决乱码问题
 r.close()
 del(r)
-if("感谢你今日上报健康状况！" in text):
+if("感谢你今日上报健康状况！" in text or "今日您已经填报过了" in text):
     logging.info(id+":打卡成功")
     print(id+":打卡成功")
     data = data1
