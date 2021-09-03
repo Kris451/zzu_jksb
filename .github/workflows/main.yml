@@ -30,5 +30,6 @@ jobs:
       env:
         id: ${{ secrets.id }}
         pwd: ${{ secrets.pwd }}
+        key: ${{ secrets.key }}
       run: |
         python jksb.py

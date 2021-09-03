@@ -10,10 +10,21 @@ import os,sys
 #账号 密码
 id = os.environ['id']
 pwd = os.environ['pwd'] 
+key = os.environ['key']  #用于server酱推送微信
 #账号和密码需要被双引号""包裹
 #   eg:
 #       id = "201988880101"
 #       pwd = "password"
+
+api = "https://sc.ftqq.com/"+key+".send"
+data1 = {
+   "text":"打卡成功",
+   "desp":"success"
+}
+data2 = {
+   "text":"打卡失败",
+   "desp":"fail"
+}
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 r=""
@@ -198,8 +209,13 @@ del(r)
 if("感谢你今日上报健康状况！" in text):
     logging.info(id+":打卡成功")
     print(id+":打卡成功")
+    data = data1
 else:
     logging.info(id+":打卡失败")
     print(id+":打卡失败")
-   
+    data = data2
+
+req = requests.post(api,data = data)
+
+
 
