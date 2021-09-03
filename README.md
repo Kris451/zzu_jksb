@@ -22,7 +22,7 @@ pwd = "XXXXX"
 ```bash
 python jksb.py
 ``` 
-3. 如果提示未安装requests模块，请输入下面命令
+3. 如果提示未安装requests模块，请输入下面命令，并重新执行第2步
 ```bash
 pip install requests
 ```
@@ -45,5 +45,6 @@ pip install requests
   ```
 
 + 如何每日执行此程序？
-  + 需要你有一台Linux服务器。服务器按照此教程：[Linux设置定时任务](https://segmentfault.com/a/1190000023186565#:~:text=%E5%9C%A8Linux%20%E4%B8%AD%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8,%E5%86%99%E5%85%A5%E4%B8%80%E4%B8%AAcrontab%20%E6%96%87%E4%BB%B6%E3%80%82)进行配置
+  + 需要你有一台Linux服务器。服务器按照此教程：[crontab设置定时任务](https://segmentfault.com/a/1190000023186565#:~:text=%E5%9C%A8Linux%20%E4%B8%AD%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8,%E5%86%99%E5%85%A5%E4%B8%80%E4%B8%AAcrontab%20%E6%96%87%E4%BB%B6%E3%80%82)进行配置
+  + [GithubAction](https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)也可以利用crontab设置定时任务，感谢 [@kris451](https://github.com/Kris451) 提供思路
   + 如果没有linux服务器，在windows上定时任务可以参考[windows定时执行python](https://www.jianshu.com/p/43676346b0be)
