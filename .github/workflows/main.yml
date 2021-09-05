@@ -2,7 +2,7 @@ name: zzu_jksb
 
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '50 22 * * *'
   push:
     branches: [ action ]
   watch:
