@@ -4,9 +4,10 @@ on:
   schedule:
     - cron: '0 23 * * *'
   push:
-    branches: [ main, action ]
+    branches: [ action ]
   watch:
     types: [started]
+  workflow_dispatch:
   
 
 jobs:
